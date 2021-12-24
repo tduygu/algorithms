@@ -1,0 +1,6 @@
+{
+    "backup_day_limit": 21,
+    "backup_dir": "/mnt/alpha/db_backups",
+    "read_db": "mysql_managed_db",
+    "new_key": 5.56789
+}
