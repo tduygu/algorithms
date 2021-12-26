@@ -19,16 +19,19 @@ def binary_search(searched_list, target):
     # target not found
     return -1
 
+
 list1 = [6, 7, 8, 9, 10, 12, 14, 15, 18]
 
 # find index of 15
 result = binary_search(list1, 15)
 
 if result != -1:
-    print("Element is present at index %d" % result)
+    print("Element is at index of %d" % result)
 else:
     print("Element is not present in array")
 
 # what if list is a sorted character array
 list2 = ["a", "b", "c", "d"]
 result2 = binary_search(list2, "b")
+
+# Is BigO complexity logarithmic in binary search?
