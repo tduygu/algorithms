@@ -6,6 +6,7 @@
 # Their weight sum is at most limit.
 # Return the minimum number of boats to carry people
 
+
 class BoatProblem:
 
     def carryPeopleUpToLimit(self, people_arr, limit):
