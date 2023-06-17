@@ -79,3 +79,20 @@ print(arr1[:5])
 print(arr1[:])
 print(arr1[10:])
 # index olarak bak ilk index dahil sonuncusu dahil değil
+
+# Reverse array
+def reverse(arr):
+    for i in range(0, int(len(arr)/2)):
+        other = len(arr) - i - 1
+        temp = arr[i]
+        arr[i] = arr[other]
+        arr[other] = temp
+    #return arr
+
+# O(n/2) -> O(n) time complexity
+
+nums1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+print(nums1)
+# print(reverse(nums1))
+reverse(nums1)
+print(nums1)
