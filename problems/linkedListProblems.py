@@ -69,9 +69,9 @@ class LinkedList:
 
 customLL = LinkedList()
 customLL.generate(10, 0, 99)
-print(customLL)
-print(len(customLL))
-print(customLL.findFromEnd(10))
+#print(customLL)
+#print(len(customLL))
+#print(customLL.findFromEnd(10))
 
 
 
