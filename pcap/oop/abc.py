@@ -101,3 +101,5 @@ if hasattr(my_pet, 'colour'):
 
 print(type(my_pet))
 print(type(my_pet).__name__)
+
+
