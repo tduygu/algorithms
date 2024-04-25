@@ -6,23 +6,26 @@ def return_bigger(a, b):
             return a
     except Exception as e:
         print(e)
+        print(type(e))
         return None
 
 
-# return_bigger(5, 'g')
+return_bigger(5, 'g')
 
-for subclass in Exception.__subclasses__():
-    print(subclass.__name__)
+##############################################################
 
-
-try:
-    raise Exception
-except Exception as e:
-    print(e.args)
-
-try:
-    raise Exception('I do not like it', 'in fact I do not like it at all')
-except Exception as e:
-    print(e.args)
+# for subclass in Exception.__subclasses__():
+#     print(subclass.__name__)
+##############################################################
+#
+# try:
+#     raise Exception
+# except Exception as e:
+#     print(e.args)
+###############################################################
+# try:
+#     raise Exception('I do not like it', 'in fact I do not like it at all')
+# except Exception as e:
+#     print(e.args)
 
 

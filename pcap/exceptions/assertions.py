@@ -8,7 +8,8 @@
 # 2. Handle AssertionErrors in try...except
 
 def calculate_inverse(number):
-    assert(number != 0), 'Got 0 as a member!'
+    #assert(number != 0), 'Got 0 as a member!'
+    assert number != 0
     return 1 / number
 
 calculate_inverse(5)

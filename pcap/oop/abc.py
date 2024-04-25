@@ -1,3 +1,17 @@
+# OOP Principles
+# 1. encapsulation
+# 2. abstraction
+# 3. inheritance
+# 4. polymorphism
+
+# encapsulation:
+# Objects should keep their state private and only expose a set of public functions to the outside world.
+
+# abstraction:
+# Objects should keep the details of how they work to themselves and only expose some high level operations to the outside world.
+
+
+
 class Car:
     def __init__(self, model, colour, initial_speed = 0):
         self.model = model
@@ -27,11 +41,6 @@ lovely_car = Car("Amarok", "black", -50)
 lovely_car.speed_up()
 lovely_car.show_speed()
 
-# OOP Principles
-# 1. encapsulation
-# 2. abstraction
-# 3. inheritance
-# 4. polymorphism
 
 
 class Dog():
@@ -96,10 +105,15 @@ print(Dog.__dict__)
 if hasattr(Dog, 'counter'):
     print(Dog.counter)
 
+if hasattr(my_pet, 'counter'):
+    print(my_pet.counter)
+
 if hasattr(my_pet, 'colour'):
     print(my_pet.colour)
 
 print(type(my_pet))
 print(type(my_pet).__name__)
+
+print(Dog.__module__)
 
 
