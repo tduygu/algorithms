@@ -1,5 +1,7 @@
 import xmltodict, json
 
+import general.parsers
+
 # import xml.etree.ElementTree as ET
 # #
 # root = ET.parse('returned_soap.xml').getroot()
@@ -10,7 +12,7 @@ import xmltodict, json
 # for item in root.findall('Data/UserActivityBriefResult'):
 #     print(item)
 
-obj = xmltodict.parse("""
+obj = general.parsers.parse("""
 <employees>
 	<employee>
   		<name>Dave</name>
@@ -23,11 +25,11 @@ obj = xmltodict.parse("""
 # print(obj["employees"]["employee"]['name'])
 
 with open('sample.xml', 'r') as my_xml_file:
-    obj2 = xmltodict.parse(my_xml_file.read())
+    obj2 = general.parsers.parse(my_xml_file.read())
 # print(json.dumps(obj2))
 
 with open('returned_soap3.xml') as my_soap_file:
-    obj3 = xmltodict.parse(my_soap_file.read())
+    obj3 = general.parsers.parse(my_soap_file.read())
 # print(json.dumps(obj3))
 # print(json.dumps(obj3, indent=4, separators=(',', ': ')))
 abc = obj3["soap:Envelope"]["soap:Body"]["GetAllUserCompletedActivityInfoByCompleteDateResponse"][

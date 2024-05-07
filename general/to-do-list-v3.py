@@ -1,4 +1,13 @@
-todos = []
+#from functions import get_todos, write_todos
+import functions
+
+# text = """
+# Principles of productivity:
+# Managing your inflow.
+# Systemizing everything that repeats.
+# """
+#
+# print(text)
 
 while True:
     user_action = input("Type add, show, edit, complete or exit: ")
@@ -8,17 +17,15 @@ while True:
     if user_action.startswith("add"):
         todo = user_action[4:] +"\n"
 
-        with open('files/todos.txt', 'r') as file:
-            todos = file.readlines()
+        todos = functions.get_todos()
 
         todos.append(todo)
 
-        with open('files/todos.txt', 'w') as file:
-            file.writelines(todos)
+        functions.write_todos(filepath='files/todos.txt', todos_list=todos)
+
 
     elif user_action.startswith("show"):
-        with open('files/todos.txt', 'r') as file:
-            todos = file.readlines()
+        todos = functions.get_todos()
         for ind, item in enumerate(todos):
             item = item.strip('\n')
             print(ind+1, item)
@@ -31,14 +38,13 @@ while True:
             else:
                 continue
 
-            with open('files/todos.txt', 'r') as file:
-                todos = file.readlines()
+            todos = functions.get_todos()
 
             new_value = input(f"Provide the new value for {todos[no]}")
             todos[no] = new_value + '\n'
 
-            with open('files/todos.txt', 'w') as file:
-                file.writelines(todos)
+            functions.write_todos(todos)
+
         except ValueError:
             print("Invalid command")
             continue
@@ -54,14 +60,12 @@ while True:
             else:
                 continue
 
-            with open('files/todos.txt', 'r') as file:
-                todos = file.readlines()
+            todos = functions.get_todos()
 
             todo_to_remove  = todos[index].strip('\n')
             todos.pop(index)
 
-            with open('files/todos.txt', 'w') as file:
-                file.writelines(todos)
+            functions.write_todos(todos)
 
             print(f"{todo_to_remove} is removed.")
         except ValueError:
