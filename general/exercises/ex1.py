@@ -5,7 +5,11 @@ def generate_random(lbound, ubound):
     return r
 
 while True:
-    lbound = int(input("Enter the lower bound: "))
-    ubound = int(input("Enter the upper bound: "))
-    print(generate_random(lbound, ubound))
+    try:
+        lbound = int(input("Enter the lower bound: "))
+        ubound = int(input("Enter the upper bound: "))
+        print(generate_random(lbound, ubound))
+    except:
+        break
+
 
