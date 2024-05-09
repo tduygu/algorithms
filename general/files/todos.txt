@@ -2,3 +2,5 @@ sweep the floor
 mop the floor
 wipe
 hang the laundry
+apply for the job
+work on Python
