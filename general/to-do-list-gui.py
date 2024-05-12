@@ -31,7 +31,8 @@ while True:
             functions.write_todos(todos)
             window['lst_todos'].update(values=todos)
         case sg.WIN_CLOSED:
-            break
+            exit()
+            # break
         case 'lst_todos':
             window['txt_todo'].update(value=values['lst_todos'][0])
         case "Edit":
@@ -42,6 +43,8 @@ while True:
             todos[n] = new_todo
             functions.write_todos(todos)
             window['lst_todos'].update(values=todos)
+
+print('Bye')
 window.close()
 
 
