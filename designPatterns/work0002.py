@@ -1,8 +1,5 @@
-#SOLID - OCP - Open Close Principle
+#SOLID - OCP - Open Closed Principle
 from enum import Enum
-
-from aptdaemon.logger import GREEN
-from reportlab.platypus.paraparser import sizeDelta
 
 
 class Color(Enum):
