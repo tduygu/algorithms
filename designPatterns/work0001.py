@@ -1,4 +1,4 @@
-#SRP #SOC
+#SOLID #SRP #SOC
 from fileinput import filename
 
 
