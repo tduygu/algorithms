@@ -20,8 +20,9 @@ class Product:
 
 
 #  OCP = open for extension, closed for modification
+# After you write and modify a class you should not modify it instead you should extend it.
 
-
+# breaking OCP
 class ProductFilter:
     def filter_by_color(self, products, color):
         for p in products:
@@ -30,3 +31,10 @@ class ProductFilter:
     def filter_by_size(self, products, size):
         for p in products:
             if p.size == size : yield p
+
+    def filter_by_size_and_color(self, products, size, color):
+        for p in products:
+            if p.color == color and p.size == size:
+                yield p
+
+    
