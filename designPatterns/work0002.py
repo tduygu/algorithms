@@ -46,6 +46,9 @@ class Specification:
     def is_satisfied(self, item):
         pass
 
+    def __and__(self, other):
+        return AndSpecification(self, other)
+
 class AndSpecification(Specification):
     def __init__(self, *args):
         self.args = args
@@ -104,6 +107,11 @@ if __name__ == '__main__':
     large_blue = AndSpecification(large, ColorSpecification(Color.BLUE))
     for p in bf.filter(products, large_blue):
         print(f' {p.name} is large and blue')
+
+    large_blue_2 = SizeSpecification(Size.LARGE) & ColorSpecification(Color.BLUE)
+    for p in bf.filter(products, large_blue_2):
+        print(f' {p.name} is large and blue')
+
 
 
 
