@@ -1,4 +1,7 @@
 # Interface Segregation Principle
+from abc import abstractmethod
+
+
 class Machine:
     def Print(self, document):
         raise NotImplementedError
@@ -41,6 +44,57 @@ class OldFashionecPrinter(Machine):
 # bir örnek oluşturabilirsin yetenekler class'ı ve oldman'de günümüzde olan ama
 # onun zamanında olmayan yetenekler olabilir ya da kişilerin bazıları için geçersiz
 # yetenekler. O yüzden işin doğrusu her yetenek için ayrı interface oluşturmak.
+
+# Çocukları baştan belli yeteneklere zorlamak gibi, her class için baştan kabulle gelmek.
+# onun yerine ISP:
+
+class Printer:
+    @abstractmethod
+    def print(self, document):
+        pass
+
+class Scanner:
+    @abstractmethod
+    def scan(self, document):
+        pass
+
+class myPrinter(Printer):
+    def print(self, document):
+        pass
+
+class modernPrinter(Printer, Scanner):
+    def print(self, document):
+        pass
+
+    def scan(self, document):
+        pass
+
+# We can still have a multifunction interface, such that:
+class MultiFunctionDevice(Printer, Scanner):
+    @abstractmethod
+    def print(self, document):
+        pass
+
+    @abstractmethod
+    def scan(self, document):
+        pass
+
+class myMultiFunctionDevice(MultiFunctionDevice):
+    def __init__(self, printer, scanner):
+        self.printer = printer
+        self.scaner = scanner
+
+    def print(self, document):
+        self.printer.print(document)
+
+    def scan(self, document):
+        self.scaner.scan(document)
+
+
+
+
+
+
 
 
 
