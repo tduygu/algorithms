@@ -24,7 +24,7 @@ class CircularSinglyLinkedList:
         self.tail = node
         return "The CSLL has been created."
 
-    def inserCSLL(self, value, location):
+    def insertCSLL(self, value, location):
         if self.head is None:
             return "The head reference is None"
         if location < -1:
