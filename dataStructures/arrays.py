@@ -19,7 +19,7 @@ print(my_array1)
 my_array1.insert(4, 6)
 # my_array1.insert(100, 6)
 # print(my_array1)
-# complexity of element insrtion time complexity : O(n), space complexity : O(1)
+# complexity of element insertion time complexity : O(n), space complexity : O(1)
 
 def traversalArray(array):
     for i in array:

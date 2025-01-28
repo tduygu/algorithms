@@ -9,7 +9,9 @@
 """
 import json
 
-ACCOUNTNAME= "kitapkahvemuhabbet"
+# ACCOUNTNAME= "kitapkahvemuhabbet"
+# ACCOUNTNAME = "linesandforms"
+ACCOUNTNAME = "ordinary.journeys"
 FILEOUTNAME= '../insta_files/'+ACCOUNTNAME+'.txt'
 SEPR = "\n"+'─' * 40+"\n"+ '-'*40+'\n'
 
